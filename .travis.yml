@@ -4,14 +4,18 @@ language: node_js
 
 notifications:
   email:
+    recipients:
+      - devcenter@docusign.com
     on_success: never
     on_failure: change
 
 node_js:
-  - "0.10"
-  - "0.12"
+  - "2.2"
+  - "3"
   - "4"
   - "5"
+  - "6"
+  - "7"
 
 after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
 
